@@ -1,8 +1,9 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, Logger } from '@nestjs/common';
 import { AppConfigService } from '../config/config.service';
 
 @Injectable()
 export class SandboxService {
+  private readonly logger = new Logger();
   constructor(@Inject('AppConfigService') private config: AppConfigService) {}
 
   getData(): { appEnviroment: string } {
@@ -14,6 +15,7 @@ export class SandboxService {
       enviroment,
       logging,
     };
+    this.logger.log('Hello World!');
     return { appEnviroment: JSON.stringify(message) };
   }
 }
