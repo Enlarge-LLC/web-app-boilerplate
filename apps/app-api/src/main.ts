@@ -17,7 +17,12 @@ async function bootstrap() {
 
   // Setup swagger
   const openAPIPrefix = 'document';
-  const config = new DocumentBuilder().build();
+  const config = new DocumentBuilder()
+    .setTitle(`${process.env.APP_NAME ?? 'API Document'}`)
+    .setDescription('API Document Description.')
+    .setContact('API Author', '', '__')
+    .setVersion(process.env.APP_VERSION)
+    .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(openAPIPrefix, app, document);
 
