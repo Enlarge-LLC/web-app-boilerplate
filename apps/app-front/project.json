@@ -23,7 +23,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "app-front:build",
-        "dev": true
+        "dev": true,
+        "port": 14200
       },
       "configurations": {
         "development": {

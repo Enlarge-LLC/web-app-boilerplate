@@ -1,11 +1,10 @@
 import { Module } from '@nestjs/common';
 
-import { SandboxController } from './sandbox/sandbox.controller';
-import { SandboxService } from './sandbox/sandbox.service';
+import { SandboxModule } from './sandbox/sandbox.module';
 
 @Module({
-  imports: [],
-  controllers: [SandboxController],
-  providers: [SandboxService],
+  imports: [SandboxModule],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

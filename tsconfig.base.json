@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@web-app-monorepo-boilerplate/ui-components": ["libs/ui-components/src/index.ts"]
+      "@web-app-monorepo-boilerplate/ui-components": [
+        "libs/ui-components/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
