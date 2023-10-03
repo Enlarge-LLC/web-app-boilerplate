@@ -2877,6 +2877,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/mapped-types@npm:2.0.2":
+  version: 2.0.2
+  resolution: "@nestjs/mapped-types@npm:2.0.2"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    class-transformer: ^0.4.0 || ^0.5.0
+    class-validator: ^0.13.0 || ^0.14.0
+    reflect-metadata: ^0.1.12
+  peerDependenciesMeta:
+    class-transformer:
+      optional: true
+    class-validator:
+      optional: true
+  checksum: 1fb0dca3838d0dc23107233e95a711e251bfbef9017589d3764c955a1cf190c8372179cee70e3674807896f53a98ab2ba80cd769b4f072fadefb708be1cc911b
+  languageName: node
+  linkType: hard
+
 "@nestjs/platform-express@npm:^10.0.2":
   version: 10.2.6
   resolution: "@nestjs/platform-express@npm:10.2.6"
@@ -2919,6 +2936,33 @@ __metadata:
   peerDependencies:
     typescript: ">=4.3.5"
   checksum: d7ee0236cc0e130c3bfb2f4794112b0f2e24caaf09323f553acb595629da4ba042aaf98dd5237bf7c9fd389df915930877d23757ea3e7e2b5da94539c1e5c36e
+  languageName: node
+  linkType: hard
+
+"@nestjs/swagger@npm:^7.1.12":
+  version: 7.1.12
+  resolution: "@nestjs/swagger@npm:7.1.12"
+  dependencies:
+    "@nestjs/mapped-types": 2.0.2
+    js-yaml: 4.1.0
+    lodash: 4.17.21
+    path-to-regexp: 3.2.0
+    swagger-ui-dist: 5.7.2
+  peerDependencies:
+    "@fastify/static": ^6.0.0
+    "@nestjs/common": ^9.0.0 || ^10.0.0
+    "@nestjs/core": ^9.0.0 || ^10.0.0
+    class-transformer: "*"
+    class-validator: "*"
+    reflect-metadata: ^0.1.12
+  peerDependenciesMeta:
+    "@fastify/static":
+      optional: true
+    class-transformer:
+      optional: true
+    class-validator:
+      optional: true
+  checksum: 4c56924f3a5e5f8b8063315e95c5fef42f2b47ef311bf6fad974e7564693dfc368f06e7bdf4f333afe6e967e7dbc417650e76f3ed7d9cd94491fcee618ab3881
   languageName: node
   linkType: hard
 
@@ -6564,6 +6608,7 @@ __metadata:
     "@nestjs/core": ^10.0.2
     "@nestjs/platform-express": ^10.0.2
     "@nestjs/schematics": ^10.0.1
+    "@nestjs/swagger": ^7.1.12
     "@nestjs/testing": ^10.0.2
     "@nx/eslint-plugin": 16.9.1
     "@nx/jest": 16.9.1
@@ -18094,6 +18139,13 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: 381ba14aa782e71ab7033227634a3041c11fa3e2769aeaf0df43a08a615de61925108e34f55af6e7c5146f4a3109e78deabb4fa9d687e36d45d1f848b4e23d17
+  languageName: node
+  linkType: hard
+
+"swagger-ui-dist@npm:5.7.2":
+  version: 5.7.2
+  resolution: "swagger-ui-dist@npm:5.7.2"
+  checksum: 1cdf8985e5e7266bc96389dee6040726b4d9962e71100b193935b94b6ccb649a7eba742f11094b6493e60e39a79e91e49dc9b0eaa6ee993fd68013189abe374b
   languageName: node
   linkType: hard
 

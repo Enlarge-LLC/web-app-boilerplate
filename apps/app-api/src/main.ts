@@ -5,6 +5,7 @@
 
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 import { AppModule } from './app.module';
 import { AppLoggerService } from './logger/logger.service';
@@ -13,14 +14,20 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: false,
   });
-  const globalPrefix = 'api';
-  app.setGlobalPrefix(globalPrefix);
+
+  // Setup swagger
+  const openAPIPrefix = 'document';
+  const config = new DocumentBuilder().build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup(openAPIPrefix, app, document);
+
   const port = process.env.PORT || 3000;
   const logger = await app.resolve<AppLoggerService>(AppLoggerService);
   app.useLogger(logger);
   await app.listen(port);
+  Logger.log(`🚀 Application is running on: http://localhost:${port}`);
   Logger.log(
-    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
+    `🚀 OpenAPI document is running on: http://localhost:${port}/${openAPIPrefix}`,
   );
 }
 
