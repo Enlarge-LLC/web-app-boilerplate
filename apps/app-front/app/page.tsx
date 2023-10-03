@@ -1,5 +1,6 @@
 'use client';
 
+import { UiComponents } from '@web-app-monorepo-boilerplate/ui-components';
 import styled from 'styled-components';
 
 const StyledPage = styled.div`
@@ -14,7 +15,7 @@ export default function Index() {
    */
   return (
     <StyledPage>
-      <h1>Hello world</h1>
+      <UiComponents />
     </StyledPage>
   );
 }

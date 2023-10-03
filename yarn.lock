@@ -6520,9 +6520,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@web-app-monorepo-template/source@workspace:.":
+"@web-app-monorepo-boilerplate/source@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@web-app-monorepo-template/source@workspace:."
+  resolution: "@web-app-monorepo-boilerplate/source@workspace:."
   dependencies:
     "@babel/core": ^7.14.5
     "@babel/preset-react": ^7.14.5
